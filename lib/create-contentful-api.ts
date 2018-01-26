@@ -178,7 +178,7 @@ export default function createContentfulApi ({http, shouldLinksResolve}) {
    * .then((response) => console.log(response.items))
    * .catch(console.error)
    */
-  function getEntries (query = {}) {
+  function getEntries (query:any = {}) {
     const resolveLinks = shouldLinksResolve(query)
     const resolveForAllLocales = (query.locale && query.locale === '*')
     normalizeSelect(query)

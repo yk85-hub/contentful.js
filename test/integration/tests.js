@@ -1,6 +1,6 @@
 import test from 'blue-tape'
 
-import * as contentful from '../../lib/contentful'
+import * as contentful from '../../dist/es-modules/contentful'
 
 const params = {
   accessToken: 'b4c0n73n7fu1',

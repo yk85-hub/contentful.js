@@ -9,6 +9,8 @@ import axios from '@contentful/axios'
 import {createHttpClient, getUserAgentHeader} from 'contentful-sdk-core'
 import createContentfulApi from './create-contentful-api'
 import createLinkResolver from './create-link-resolver'
+import {ContentfulOptions, ContentfulClientApi} from './interfaces'
+
 /**
  * Create a client instance
  * @func
@@ -37,8 +39,8 @@ import createLinkResolver from './create-link-resolver'
  *  space: 'mySpaceId'
  * })
  */
-
-export function createClient (params) {
+let __VERSION__
+export function createClient (params: ContentfulOptions): ContentfulClientApi {
   if (!params.accessToken) {
     throw new TypeError('Expected parameter accessToken')
   }

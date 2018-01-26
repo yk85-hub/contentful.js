@@ -1,7 +1,7 @@
 import test from 'blue-tape'
 import sinon from 'sinon'
 
-import createContentfulApi, { __RewireAPI__ as createContentfulApiRewireApi } from '../../lib/create-contentful-api'
+import createContentfulApi, { __RewireAPI__ as createContentfulApiRewireApi } from '../../dist/es-modules/create-contentful-api'
 import { contentTypeMock, assetMock, entryMock } from './mocks'
 
 let entitiesMock

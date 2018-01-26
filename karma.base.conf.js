@@ -27,7 +27,8 @@ console.log(JSON.stringify(webpackConfig, null, 2))
 module.exports = {
   plugins: [
     require('karma-tap'),
-    require('karma-webpack')
+    require('karma-webpack'),
+    require('karma-spec-reporter')
   ],
 
   basePath: '',
@@ -46,7 +47,7 @@ module.exports = {
   browserNoActivityTimeout: 4 * 60 * 1000,
   browserDisconnectTimeout: 10000,
   captureTimeout: 4 * 60 * 1000,
-  reporters: [ 'dots' ],
+  reporters: [ 'spec' ],
   port: 9876,
   colors: true,
   autoWatch: false,

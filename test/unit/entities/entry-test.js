@@ -2,7 +2,7 @@ import test from 'blue-tape'
 import cloneDeep from 'lodash/cloneDeep'
 
 import {entryMock, assetMock} from '../mocks'
-import {wrapEntry, wrapEntryCollection} from '../../../lib/entities/entry'
+import {wrapEntry, wrapEntryCollection} from '../../../dist/es-modules/entities/entry'
 
 test('Entry is wrapped', (t) => {
   const wrappedEntry = wrapEntry(entryMock)
